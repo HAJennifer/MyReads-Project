@@ -8,3 +8,8 @@ class BookShelf extends React.Component {
   updateBook = (book, shelf) => {
     this.props.onChangeShelf(book, shelf) 
   }
+propTypes = {
+    title: PropTypes.string.isRequired,
+    books: PropTypes.array.isRequired,
+    onChangeShelf: PropTypes.func.isRequired
+  }
