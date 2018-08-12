@@ -26,6 +26,9 @@ changeShelf = (book, shelf) =>{
      books = [...this.state.books, {...book, shelf}] 
    } this.setState({books}) 
 
+ BooksAPI.update(book, shelf).then((data) => {
+   }) 
+ }  
 
   render() {
     return (
