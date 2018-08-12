@@ -34,6 +34,34 @@ componentDidMount() {
      	this.setState({books:books})
         }) 
 } 
+ updatesQuery = (query) => {
+    this.setState(state => ({ query: query }));
+    if(query !== '') {
+      this.searchBooks(query);
+    } else {
+      this.setState({ displayBooks: [] });
+    }
+  }
+	updateQuery = (query) => { 
+    this.setState({query: query}) 
+   	let displayBooks = [] 
+    if (query) {
+    BooksAPI.search(query).then(response => {
+    if (response.length) { 
+    displayBooks = response.map(i => { 
+    const index = this.state.books.findIndex(c => c.id === i.id) 
+    if( index >= 0 ) { 
+    return this.state.books[index] 
+    } else { 
+      return i 
+    } 
+   }) 
+   } 
+   this.setState({displayBooks})
+   }) 
+   } else { this.setState({displayBooks }) 
+    } 
+    } 
 
   render() {
     return (
