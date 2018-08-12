@@ -14,7 +14,8 @@ propTypes = {
     onChangeShelf: PropTypes.func.isRequired
   }
  render() {
-  return (<div className="list-books">
+  return (
+    <div className="list-books">
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
@@ -25,7 +26,7 @@ propTypes = {
               <div className="bookshelf-books">
                 <ol className="books-grid">
                   { 
-             this.props.books.filter(book => book.shelf=== 'currentlyReading')
+                     this.props.books.filter(book => book.shelf=== 'currentlyReading')
                     .map(book => (
                       <Book key={book.id} book={book} onChangeBook={(book, shelf) => this.changeBook(book, shelf)}></Book>
                     ))}
@@ -36,7 +37,8 @@ propTypes = {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  { this.props.books.filter(book => book.shelf === 'wantToRead')
+                  { 
+                    this.props.books.filter(book => book.shelf === 'wantToRead')
                     .map(book => (
                       <Book key={book.id} book={book} onChangeBook={(book, shelf) => 
 							this.changeBook(book, shelf)}>
@@ -49,7 +51,8 @@ propTypes = {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  { this.props.books.filter(book => book.shelf === 'read')
+                  { 
+                    this.props.books.filter(book => book.shelf === 'read')
                     .map(book => (
                       <Book key={book.id} book={book} onChangeBook={(book, shelf) => this.changeBook(book, shelf)}/>
               
