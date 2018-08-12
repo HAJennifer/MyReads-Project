@@ -6,7 +6,7 @@ import BookShelf from './Components/BookShelf'
 import Book from './Components/Book'
 import NotFound from './Components/NotFound'
 
-class App extends React.Component {
+class Apps extends React.Component {
   state = {
      allbooks: [],
      displayBooks: [],
@@ -99,4 +99,4 @@ componentDidMount() {
 )
 } 
 } 
-export default App
+export default Apps
