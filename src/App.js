@@ -3,6 +3,7 @@ import * as BooksAPI from './BooksAPI'
 import './App.css'
 import {Route, Link} from 'react-router-dom'
 import BookShelf from './Components/BookShelf'
+import Book from './Components/Book'
 
 class BooksApp extends React.Component {
   state = {
