@@ -13,6 +13,19 @@ class BooksApp extends React.Component {
      query: '',
      showSearchPage: false
   }
+changeShelf = (book, shelf) =>{
+   let books; 
+   if (this.state.books.findIndex(i => i.id === book.id) > 0) { 
+     books = this.state.books.map(i => {
+     if (i.id === book.id) { 
+       return {...book, shelf} 
+    } else { return i }
+       
+   }) 
+   } else { 
+     books = [...this.state.books, {...book, shelf}] 
+   } this.setState({books}) 
+
 
   render() {
     return (
