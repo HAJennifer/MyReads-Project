@@ -64,6 +64,7 @@ componentDidMount() {
     } 
 
   render() {
+	const {query} = this.state 
     return (
       <div className="app">
        <Route exact path="/search" render={() => ( 
