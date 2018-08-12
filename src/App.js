@@ -31,14 +31,18 @@ class BooksApp extends React.Component {
             </div>
           </div>
         ) : (
-            <div className="open-search">
-              <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
-            </div>
-          </div>
-        )}
-      </div>
-    )
-  }
-}
+           
+ <Route exact path="/" render={() => ( 
+  <BookShelf books={this.state.books} onChangeShelf={(book, shelf) => 
+  this.changeShelf(book, shelf)}
+/> 
 
+)}
+/>
+  <Route component={NotFound} />
+</div> 
+)
+} 
+} 
+export default App
 export default BooksApp
