@@ -41,8 +41,7 @@ propTypes = {
                     this.props.books.filter(book => book.shelf === 'wantToRead')
                     .map(book => (
                       <Book key={book.id} book={book} onChangeBook={(book, shelf) => 
-							this.changeBook(book, shelf)}>
-					</Book>
+							this.changeBook(book, shelf)}></Book>
                     ))}
                 </ol>
               </div>
