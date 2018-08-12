@@ -13,3 +13,4 @@ propTypes = {
     books: PropTypes.array.isRequired,
     onChangeShelf: PropTypes.func.isRequired
   }
+ render() {
