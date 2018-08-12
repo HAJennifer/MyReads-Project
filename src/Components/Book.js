@@ -15,3 +15,9 @@ class Book extends React.Component {
     this.props.onChangeBook(this.props.book, event.target.value)
   }
 render() {
+  const style = {
+      width: 128,
+      height: 192,
+      backgroundImage: this.props.book.imageLinks ?
+        `url(${this.props.book.imageLinks.thumbnail})` : ''
+    }
