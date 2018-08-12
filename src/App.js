@@ -77,10 +77,15 @@ componentDidMount() {
               </div>
             </div>
             <div className="search-books-results">
-              <ol className="books-grid"></ol>
+            <ol className="books-grid"> {this.state.displayBooks.map((book, k) => ( 
+   		<Book key={k} book={book} onChangeBook={(book, shelf) => this.changeShelf(book,shelf)}/> 
+   		))
+		}
+	    </ol>
             </div>
           </div>
-        ) : (
+       	  )} 
+	/> 
            
  <Route exact path="/" render={() => ( 
   <BookShelf books={this.state.books} onChangeShelf={(book, shelf) => 
