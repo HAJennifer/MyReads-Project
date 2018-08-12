@@ -5,7 +5,7 @@ import NotFound from './NotFound'
 import PropTypes from 'prop-types'
 
 class BookShelf extends React.Component {
-  updateBook = (book, shelf) => {
+  changeBook = (book, shelf) => {
     this.props.onChangeShelf(book, shelf) 
   }
 propTypes = {
