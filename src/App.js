@@ -29,6 +29,11 @@ changeShelf = (book, shelf) =>{
  BooksAPI.update(book, shelf).then((data) => {
    }) 
  }  
+componentDidMount() { 
+     	BooksAPI.getAll().then((books) => { 
+     	this.setState({books:books})
+        }) 
+} 
 
   render() {
     return (
