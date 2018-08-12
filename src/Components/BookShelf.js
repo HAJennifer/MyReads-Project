@@ -27,7 +27,7 @@ propTypes = {
                   { 
              this.props.books.filter(book => book.shelf=== 'currentlyReading')
                     .map(book => (
-                      <Book key={book.id} book={book} onChangeBook={(book, shelf) => this.updateBook(book, shelf)}></Book>
+                      <Book key={book.id} book={book} onChangeBook={(book, shelf) => this.changeBook(book, shelf)}></Book>
                     ))}
                 </ol>
               </div>
@@ -51,7 +51,7 @@ propTypes = {
                 <ol className="books-grid">
                   { this.props.books.filter(book => book.shelf === 'read')
                     .map(book => (
-                      <Book key={book.id} book={book} onChangeBook={(book, shelf) => this.updateBook(book, shelf)}/>
+                      <Book key={book.id} book={book} onChangeBook={(book, shelf) => this.changeBook(book, shelf)}/>
               
                     ))}
                 </ol>
