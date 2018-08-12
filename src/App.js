@@ -8,7 +8,7 @@ import NotFound from './Components/NotFound'
 
 class Apps extends React.Component {
   state = {
-     allbooks: [],
+     books: [],
      displayBooks: [],
      query: '',
      showSearchPage: false
